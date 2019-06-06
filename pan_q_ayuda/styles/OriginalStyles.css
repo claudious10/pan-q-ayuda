@@ -10,8 +10,15 @@
 
 #footer{
 
-	position: fixed;
-    height: 100px;
-    bottom: 15%;
-    width: 100%;
+   position: static;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
+}
+
+#text{
+	padding-top: 15px;
+	text-align: center;
+	padding-bottom: 30px;
 }
