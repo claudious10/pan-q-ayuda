@@ -1,7 +1,7 @@
 <?php
-    include("./partials/_header.html");
+    include("../partials/_header.html");
 
-    include("./views/index.html");
+    include("../views/index.html");
 
-    include("./partials/_footer.html");
+    include("../partials/_footer.html");
 ?> 
