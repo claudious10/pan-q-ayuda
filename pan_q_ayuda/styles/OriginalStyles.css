@@ -18,8 +18,15 @@
    text-align: center;
 }
 
+
 #text{
 	padding-top: 15px;
 	text-align: center;
 	padding-bottom: 30px;
+}
+
+
+#contactTable{
+
+	padding-top: 15px;
 }
