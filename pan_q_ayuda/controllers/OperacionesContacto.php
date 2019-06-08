@@ -1,6 +1,7 @@
 <?php
     include("../partials/_header.html");
-
+    
+    $posted = false;
     
     if (isset($_POST["nombre"]) && isset($_POST["apellido"]) && isset($_POST["correo"]) && isset($_POST["asunto"]) && isset($_POST['mensaje'])) { 
         //echo "entraron todos" . $_POST['mensaje'];
@@ -13,7 +14,7 @@
 
 
         //$correoDestinatario="anayolanda@panqayuda.com.mx";
-        $correoDestinatario="a01205935@itesm.mx.com";//POR AHORA PARA HACER PRUEBAS 
+        $correoDestinatario="a01205935@gmail.com";//POR AHORA PARA HACER PRUEBAS 
 
         require '../libraries/vendor/autoload.php';
 
@@ -27,17 +28,25 @@
                 'to'      => $correoDestinatario,
                 'subject' => $subject,
                 'text'    => $message));
+        
 
          if( $result == true ) {
-            echo "Mensaje enviado satisfactoriamente...A Pan Q' Ayuda ";
+            $posted = true;
+
+            //echo "Mensaje enviado satisfactoriamente...A Pan Q' Ayuda ";
+
          }else {
-            echo "Error:Message could not be sent... ";
+            //echo "Error:Message could not be sent...";
+            $posted = false;
+
+
          }
-         
+
 
     }else{
         //echo "Faltan datos!!!";
     }
+    
 
     
 
